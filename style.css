@@ -894,3 +894,27 @@ body {
     background: transparent !important;
     box-shadow: none !important;
 }
+
+/* =====================================================
+   CORREÇÃO DO HEADER FIXO NO TOPO
+===================================================== */
+header {
+    position: fixed !important; /* Força o menu a ficar preso no topo */
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Garante que fique acima de mapas, imagens e do botão do Whats */
+}
+
+body {
+    padding-top: 105px !important; /* Empurra o conteúdo para baixo para o menu não tampar o texto */
+}
+
+/* Ajusta o espaçamento do topo no mobile, já que o menu fica menor */
+@media (max-width: 900px) {
+    header{
+        position: fixed !important;
+    }
+    body {
+        padding-top: 75px !important; 
+    }
+}
